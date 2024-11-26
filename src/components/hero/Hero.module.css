@@ -67,7 +67,7 @@
   & :nth-child(2) {
     border-radius: 50%;
     border: 1px solid skyblue;
-    display: flex;
+    display: grid;
     width: 20px;
     aspect-ratio: 1;
     padding: 2px;
