@@ -71,7 +71,7 @@
     width: 20px;
     aspect-ratio: 1;
     padding: 2px;
-align-items: center;
+align-items: center !important;
     justify-content: center;
   }
 }
