@@ -1,0 +1,304 @@
+.container {
+  padding: 0.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.wrapper {
+  align-items: baseline;
+  justify-content: center;
+  display: flex;
+  position: relative;
+
+  & img {
+    width: 20rem;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.h_sides {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.blueCircle {
+  width: 20rem;
+  aspect-ratio: 1;
+  position: absolute;
+  background: linear-gradient(135.74deg, #0bb5ff 14.09%, #6dd3fe 83.81%);
+  border-radius: 50%;
+  z-index: -99;
+}
+
+.cart2 {
+  position: absolute;
+  bottom: 18%;
+  right: 7%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &>svg {
+    width: 20px;
+    height: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    border: 4px solid var(--black);
+  }
+}
+
+.signup {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: white;
+  padding: 8px;
+  font-size: 0.77rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow1);
+
+  & :first-child {
+    display: block;
+    width: 6rem;
+  }
+
+  & :nth-child(2) {
+    border-radius: 50%;
+    border: 1px solid skyblue;
+    display: flex;
+    width: 20px;
+    aspect-ratio: 1;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.text1 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  width: min-content;
+  display: block;
+  font-weight: 600;
+}
+
+.text2 {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  color: black;
+
+  & :first-child {
+    font-weight: 800;
+    font-size: 1.78rem;
+  }
+
+  & :last-child {
+    display: block;
+    font-size: 0.8rem;
+  }
+}
+
+.traffic {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+
+  & :first-child {
+    font-weight: 800;
+    font-size: 1.8rem;
+  }
+
+  & :last-child {
+    font-size: 0.8rem;
+  }
+}
+
+.customers {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+
+  & :first-child {
+    font-weight: 800;
+    font-size: 1.8rem;
+  }
+
+  & :last-child {
+    font-size: 0.8rem;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr  ;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+
+    & img {
+      width: 18rem;
+    }
+  }
+
+  .blueCircle {
+    width: 18rem;
+  }
+
+  .cart2 {
+    bottom: 10%;
+    right: 5%;
+  }
+
+  .signup {
+    & :first-child {
+      width: 4.8rem;
+    }
+  }
+
+  .text1 {
+    font-size: 1rem;
+  }
+
+  .text2 {
+    & :first-child {
+      font-size: 1.5rem;
+    }
+
+    & :last-child {
+      font-size: 0.7rem;
+    }
+  }
+
+  .traffic,
+  .customers {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .cart2>svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media   (min-width:481px) and (max-width: 768px) {
+  .container {
+    grid-template-columns: 2fr ;
+    padding: 1rem;
+  }
+
+  .h_sides {
+    display: grid;
+    grid-template-rows: 1fr  ;
+    gap: 2rem;
+
+    & .traffic,.customers {
+      margin-top: 2rem;
+     
+    }
+  }
+  .wrapper {
+
+    justify-content: end;
+  }
+  .wrapper img {
+    width: 13rem;
+  }
+  .blueCircle {
+    width: 13rem;
+  }
+
+
+  .text1 {
+    font-size: 1rem;
+    /* Smaller font size */
+  }
+
+  .text2 {
+    & :first-child {
+      font-size: 1.2rem;
+      /* Smaller font size */
+    }
+
+    & :last-child {
+      font-size: 0.6rem;
+      /* Smaller font size */
+    }
+  }
+
+  .traffic,
+  .customers {
+    text-align: center;
+
+    margin-top: 1rem;
+grid-row-start: 1;
+    & :nth-child(1) {
+      font-size: 1.3rem;
+    }
+    & :nth-child(2) {
+      font-size: 0.7rem;
+    }
+  }
+  .cart2 {
+    display: none;
+  }
+  .cart2>svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+@media (min-width:320px) and (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr 1fr ;
+    margin-bottom: -2rem;
+  }
+  .wrapper img {
+    width: 11rem;
+  }
+  .blueCircle {
+    width: 11rem;
+    /* Smaller circle on mobile */
+  }
+  .cart2 {
+display: none;
+
+  }
+  .text1 {
+    font-size: .9rem;
+    /* Smaller font size */
+  }
+
+  .text2 {
+    & :first-child {
+      font-size: 1rem;
+      /* Smaller font size */
+    }
+
+    & :last-child {
+      font-size: 0.57rem;
+      /* Smaller font size */
+    }
+  }
+
+  .traffic,
+  .customers {
+text-align: center;
+    margin-top: 1rem;
+    grid-row-start: 1;
+    & :nth-child(1) {
+      font-size: 1.1rem;
+    }
+
+    & :nth-child(2) {
+      font-size: 0.5rem;
+      width: 100%;
+
+    }
+  }
+
+}
