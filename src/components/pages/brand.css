@@ -1,0 +1,81 @@
+.brands-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #333;
+  }
+  
+  .brands-header {
+    margin-bottom: 40px;
+  }
+  
+  .brands-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .brands-subtitle {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .brands-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .brand {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+    transition: transform 0.3s ease;
+  }
+  
+  .brand:hover {
+    transform: scale(1.05);
+  }
+  
+  .brand-logo {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .brand-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .brand-description {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .brands-cta {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    background-color: #ff5a5f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #e04d4f;
+  }
+  
