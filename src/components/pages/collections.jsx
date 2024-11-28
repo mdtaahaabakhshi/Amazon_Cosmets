@@ -36,7 +36,7 @@ const Collections = () => {
   );
 
   if (loading) {
-    return  <img
+    return <img
     src={loader}
     alt="loading..."
     className="loading"
