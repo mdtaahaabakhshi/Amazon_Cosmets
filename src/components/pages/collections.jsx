@@ -36,7 +36,11 @@ const Collections = () => {
   );
 
   if (loading) {
-    return <div>Loading products...</div>;
+    return  <img
+    src={loader}
+    alt="loading..."
+    className="loading"
+  />
   }
 
   if (error) {
@@ -78,9 +82,7 @@ const Collections = () => {
     </div>
   );
 
-  // return(
-  // <div>collections</div>
-  // )
+  
 };
 
 export default Collections;
