@@ -36,11 +36,21 @@ const Collections = () => {
   );
 
   if (loading) {
-    return <img
-    src={loader}
-    alt="loading..."
-    className="loading"
-  />
+    return (
+      <div
+        style={{
+          alignItems: 'center',
+          
+          display: 'flex',
+          flexDirection:'column',
+          width:100
+         
+        }}
+      >
+       
+        <img src={loader} alt="loading..." className="loading" />
+      </div>
+    );
   }
 
   if (error) {
@@ -81,8 +91,6 @@ const Collections = () => {
       </div>
     </div>
   );
-
-  
 };
 
 export default Collections;
