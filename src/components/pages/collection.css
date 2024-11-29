@@ -65,3 +65,25 @@ margin: 2rem 2rem 1rem;
 }
 
 }
+.Search-button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text color */
+  border: none; /* No border */
+  padding: 10px ; /* Padding for better spacing */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1em; /* Font size */
+  margin-inline: 1rem;
+  width: 6rem;
+  transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+}
+
+.Search-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.Search-button:active {
+  transform: scale(0.9); /* Slightly shrink when clicked */
+  background-color:rebeccapurple;
+}

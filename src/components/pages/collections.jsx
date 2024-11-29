@@ -19,7 +19,7 @@ const Collections = () => {
         }
         const data = await response.json();
         setProducts(data);
-        SetResult(data.slice(0, 15));
+        SetResult(data.slice(0, 20));
       } catch (error) {
         setError(error.message);
       } finally {
@@ -71,7 +71,7 @@ const Collections = () => {
           onChange={handleSearchChange}
           className="search-input"
         />
-        <button onClick={handleSearch}>Search</button>
+        <button  className="Search-button"onClick={handleSearch}>Search</button>
       </div>
       <div className="product-list">
         {result.length === 0 ? (
