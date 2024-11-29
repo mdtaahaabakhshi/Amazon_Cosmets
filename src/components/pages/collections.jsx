@@ -6,6 +6,8 @@ const Collections = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [result, SetResult] = useState([]);
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -17,6 +19,7 @@ const Collections = () => {
         }
         const data = await response.json();
         setProducts(data);
+        SetResult(data.slice(0, 15));
       } catch (error) {
         setError(error.message);
       } finally {
@@ -30,24 +33,24 @@ const Collections = () => {
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
-
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const handleSearch = () => {
+    const filteredProducts = products.filter((product) =>
+      product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    SetResult(filteredProducts);
+    setSearchTerm("");
+  };
 
   if (loading) {
     return (
       <div
         style={{
-          alignItems: 'center',
-          
-          display: 'flex',
-          flexDirection:'column',
-          width:100
-         
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
         }}
       >
-       
         <img src={loader} alt="loading..." className="loading" />
       </div>
     );
@@ -68,12 +71,13 @@ const Collections = () => {
           onChange={handleSearchChange}
           className="search-input"
         />
+        <button onClick={handleSearch}>Search</button>
       </div>
       <div className="product-list">
-        {filteredProducts.length === 0 ? (
+        {result.length === 0 ? (
           <div>No products found for {searchTerm}</div>
         ) : (
-          filteredProducts.map((product) => (
+          result.map((product) => (
             <div key={product.id} className="product-item">
               <img
                 src={product.image_link}
