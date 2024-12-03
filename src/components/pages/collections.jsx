@@ -43,16 +43,19 @@ const Collections = () => {
 
   if (loading) {
     return (
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-        }}
-      >
-        <img src={loader} alt="loading..." className="loading" />
-      </div>
+      // <div
+      //   style={{
+      //     display: "flex",
+      //     alignItems: "center",
+      //     justifyContent: "center",
+      //     flexDirection: "column",
+      //   }}
+      // >
+      //   <img src={loader} alt="loading..." className="loading" />
+      // </div>
+      <div className="parent-loader">
+      <div className="loader"></div></div>
+
     );
   }
 
@@ -61,7 +64,10 @@ const Collections = () => {
   }
 
   return (
+    
     <div className="collections">
+      
+
       <h1>Makeup Products</h1>
       <div className="search">
         <input
