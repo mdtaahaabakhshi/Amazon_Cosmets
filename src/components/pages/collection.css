@@ -88,18 +88,27 @@ h1 {
   background-color: rebeccapurple;
 }
 
+
 .parent-loader {
+  position: fixed; /* Cover the whole viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-height: 70vh;
- 
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.786); /* Semi-transparent background */
+  backdrop-filter: blur(1px); /* Blurred background */
+  z-index: 1000; /* Ensure it is above other content */
 }
+
+
 .loader {
   width: 10%;
   aspect-ratio: 0.75;
-  --c: no-repeat linear-gradient(#f78b06 0 0);
- 
+  --c: no-repeat linear-gradient(#f78b06e2 0 0);
+
   background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
   animation: l7 1s infinite linear alternate;
 }
@@ -123,3 +132,7 @@ height: 70vh;
     background-size: 20% 50%, 20% 50%, 20% 50%;
   }
 }
+
+
+
+

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import loader from "../../assets/loader.gif";
 import "./collection.css";
 const Collections = () => {
   const [products, setProducts] = useState([]);
@@ -43,18 +42,10 @@ const Collections = () => {
 
   if (loading) {
     return (
-      // <div
-      //   style={{
-      //     display: "flex",
-      //     alignItems: "center",
-      //     justifyContent: "center",
-      //     flexDirection: "column",
-      //   }}
-      // >
-      //   <img src={loader} alt="loading..." className="loading" />
-      // </div>
+   
       <div className="parent-loader">
-      <div className="loader"></div></div>
+      <div className="loader"></div>
+      </div>
 
     );
   }
